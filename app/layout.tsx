@@ -9,10 +9,10 @@ import { Header } from '@components/header';
 
 export const metadata: Metadata = {
   title: {
-    default: 'DeFiChain AI Chatbot',
+    default: 'DeFi Chatbot',
     template: `%s - Next.js AI Chatbot`
   },
-  description: 'DeFiChain AI Chatbot built with Next.js',
+  description: 'DeFiC AI Chatbot built with Next.js and OpenAI APIs',
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: 'white' },
     { media: '(prefers-color-scheme: dark)', color: 'black' }
