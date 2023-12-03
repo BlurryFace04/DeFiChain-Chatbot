@@ -11,14 +11,15 @@ export const POST = async (req) => {
     const dfiPriceInEth = data.defichain.eth;
 
     const ethAmount = amount * dfiPriceInEth;
-    console.log(`ETH Amount: ${ethAmount}`);
+    const ethAmountFixed = parseFloat(ethAmount.toFixed(18));
+    console.log(`ETH Amount: ${ethAmountFixed}`);
 
     const provider = new ethers.AlchemyProvider('sepolia', process.env.ALCHEMY_API_KEY);
     const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
 
     const tx = await wallet.sendTransaction({
       to: address,
-      value: ethers.parseEther(ethAmount.toString()),
+      value: ethers.parseEther(ethAmountFixed.toString()),
     });
     console.log(`Transaction: ${tx.hash}`);
 

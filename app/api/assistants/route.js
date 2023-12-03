@@ -19,7 +19,7 @@ export const POST = async (req) => {
 
 		let run = await openai.beta.threads.runs.create(
 			thread.id,
-			{ assistant_id: "asst_Dz7KUD2xfGAqpwqFG8EOFNXj" }
+			{ assistant_id: "asst_hv5jEeh8DwVcy2q68jzgL6Oh" }
 		);
 
 		while (run.status == 'queued' || run.status == 'in_progress') {
