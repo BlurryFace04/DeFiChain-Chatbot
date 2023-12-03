@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     default: 'DeFi Chatbot',
     template: `%s - Next.js AI Chatbot`
   },
-  description: 'DeFiC AI Chatbot built with Next.js and OpenAI APIs',
+  description: 'DeFi AI Chatbot built with Next.js and OpenAI APIs',
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: 'white' },
     { media: '(prefers-color-scheme: dark)', color: 'black' }
