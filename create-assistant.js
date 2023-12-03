@@ -1,7 +1,7 @@
 import OpenAI from "openai";
 import fs from 'fs';
 
-const openai = new OpenAI({ apiKey: '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' });
+const openai = new OpenAI();
 
 const documentation = await openai.files.create({
   file: fs.createReadStream("documentation.pdf"),
@@ -11,7 +11,6 @@ const documentation = await openai.files.create({
 const assistant = await openai.beta.assistants.create({
   name: "DefiChain Assistant",
   model: "gpt-4-1106-preview",
-  // model: "gpt-3.5-turbo-1106",
   instructions: `
   You are a blockchain developer with expertise on DefiChain. 
   You will be helping with any question related to DefiChain which can be code related, 
